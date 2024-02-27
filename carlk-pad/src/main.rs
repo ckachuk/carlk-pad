@@ -16,7 +16,7 @@ impl Drop for CleanUp {
 fn main() -> io::Result<()> {
     let _clean_up = CleanUp;
     
-    terminal::enable_raw_mode().expect("Could not turn on Raw mode");
+    terminal::enable_raw_mode()?;
     
     let args: Vec<String> = args().collect();
 
